@@ -85,7 +85,7 @@ function select(group, item) {
 .empty {
   padding: .33rem .66rem;
   font-size: 13px;
-  color: rgba(215, 215, 215, 0.11);
+  color: rgba(215, 215, 215, 0.233);
   text-align: center;
 }
 

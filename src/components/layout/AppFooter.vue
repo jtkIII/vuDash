@@ -4,7 +4,7 @@
       <div class="footer-left">
       </div>
       <div class="footer-center">
-        <Heart class="inline-icon" /> <span> &nbsp; I coded this in 2026</span>
+        <Heart class="inline-icon" /> <span> &nbsp; JTk Coded This in 2026</span>
       </div>
       <div class="footer-right">
         <a href="https://github.com/jtk/vudash">
@@ -55,10 +55,13 @@ footer {
   }
 
   .inline-icon {
-    width: 14px;
-    height: 14px;
+    width: 16px;
+    height: 16px;
     margin-left: 4px;
     vertical-align: middle;
     color: #9a9a9a;
   }
+  .inline-icon:hover {
+  color: #bc5090;
+}
 </style>

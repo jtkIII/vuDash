@@ -1,6 +1,6 @@
 <template>
   <div class="search-input">
-    <span class="icon">🔍</span>
+    <span class="icon"><Search class="search-icon" /></span>
 
     <input type="text" :placeholder="placeholder" :value="modelValue" @input="onInput" @focus="$emit('focus')"
       @keydown.escape="$emit('escape')" />
@@ -12,6 +12,9 @@
 </template>
 
 <script setup>
+    import {
+  Search
+} from 'lucide-vue-next'
 const props = defineProps({
   modelValue: {
     type: String,
@@ -60,7 +63,11 @@ function clear() {
 .icon {
   font-size: 14px;
   color: rgba(255, 255, 255, 0.5);
-  margin-right: 6px;
+}
+
+.search-icon {
+  width: 16px;
+  height: 16px;
 }
 
 input {
