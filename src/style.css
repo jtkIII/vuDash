@@ -328,8 +328,6 @@ select::picker(select) {
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
-
-
 .chart-card {
   background-color: #232323;
   border: 1px solid #8f8f8f13;

@@ -52,7 +52,9 @@ function clear() {
 }
 
 .search-input:focus-within {
-  outline: 2px solid #003f5c5b;
+  background-color: #202020;
+  border-color: #58508d45;
+  box-shadow: 0 3px 9px rgba(165, 99, 241, 0.15);
 }
 
 .icon {

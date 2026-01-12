@@ -1,6 +1,6 @@
 <template>
     <div class="global-search">
-        <SearchInput v-model="query" placeholder="Search users, messages, files, links…" />
+        <SearchInput v-model="query" placeholder="Search Everything Here" />
         <SearchResults :results="filteredResults" @select="onSelect" />
     </div>
 </template>

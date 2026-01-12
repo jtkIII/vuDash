@@ -4,20 +4,24 @@
       <div class="card">
         <div class="card-heading">
           <h3>Team Members</h3>
-          <p>A quick overview of your team and their roles.</p>
+          <p>Overview of the team and their roles.</p>
         </div>
         <ListUsers />
       </div>
       <div class="card">
         <div class="card-heading">
           <h3>Project Stats</h3>
-          <p>Visual representation of current project metrics.</p>
+          <p>Representation of current project metrics.</p>
         </div>
         <LineChart title="Tasks Completed Over Time" />
         <PieChart />
 
       </div>
       <div class="card">
+        <div class="card-heading">
+          <h3>Global Search</h3>
+          <p>Search users, messages, files, and links.</p>
+        </div>
         <GlobalSearch @select="handleSelect" />
       </div>
     </div>
