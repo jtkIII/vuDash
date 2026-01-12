@@ -38,6 +38,7 @@ Open the URL shown in the terminal to confirm it works.
 
 ##### Project Structure
 
+```
 src/
 ├── assets/
 ├── components/
@@ -52,12 +53,13 @@ src/
 │   └── state.js
 ├── App.vue
 └── main.js
+```
 
 ##### Simple Global State (No Pinia)
-src/store/state.js
-import { reactive } from 'vue'
+- src/store/state.js
+- import { reactive } from 'vue'
 
-export const state = reactive({
+- export const state = reactive({
   user: null,
   isLoggedIn: false
 })
