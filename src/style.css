@@ -1,20 +1,10 @@
-@font-face {
-  font-family: "Space Grotesk";
-  src: url("/fonts/SpaceGrotesk-VariableFont_wght.ttf") format("truetype");
-  font-weight: 300 700;
-  font-style: normal;
-  font-display: swap;
-}
-
 html,
 body,
 #app {
-  font-family: "Space Grotesk", system-ui, -apple-system,
+  font-family: system-ui, -apple-system,
     BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-  color: white;
-  background-color: #0f0f2f;
 }
 
 *,
@@ -41,7 +31,14 @@ body {
   min-height: 100vh;
   line-height: 1.5;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #0f0f2f;
+  background-color: #1e1e1e;
+}
+
+#main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 1rem;
 }
 
 img,
@@ -60,7 +57,6 @@ select {
   font: inherit;
 }
 
-
 p,
 h1,
 h2,
@@ -69,15 +65,12 @@ h4,
 h5,
 h6 {
   overflow-wrap: break-word;
+  line-height: 1.25;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  line-height: 1.25;
+h1 {
+  font-size: 2.3em;
+  line-height: 1.1;
 }
 
 ul[role="list"],
@@ -106,11 +99,6 @@ a:hover {
 }
 
 
-h1 {
-  font-size: 2.3em;
-  line-height: 1.1;
-}
-
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -132,13 +120,8 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-.card {
-  padding: 2em;
-}
-
-
 header {
-  background-color: #030314;
+  background-color: #161616;
   color: white;
 }
 
@@ -159,7 +142,7 @@ header ul {
 
 header ul li a {
   font-family: "Space Grotesk", system-ui, -apple-system,
-    BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
+    BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
 footer {
