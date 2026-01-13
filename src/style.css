@@ -122,14 +122,15 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #58508d;
+  background-color: #58508dcd;
   color: #ffffff99;
   cursor: pointer;
   transition: border-color 0.25s;
+    box-shadow: 0 3px 9px rgba(165, 99, 241, 0.15);
 }
 
 button:hover {
-  border-color: #bc5090;
+  border-color: rgba(130, 122, 179, 0.642);
   color: #fff;
 }
 
@@ -198,7 +199,6 @@ footer {
   font-size: 0.66rem;
   margin-top: 0;
   background-color: rgba(22, 22, 22, 0.95);
-  /* box-shadow: 0 -6px 18px rgba(0,0,0,0.6); */
   z-index: 1000;
 }
 
@@ -207,9 +207,9 @@ footer {
 }
 
 pre {
-  border-left: 4px solid #003f5c;
+  border-left: 4px solid #58508d50;
   padding: 0.6rem 1rem;
-  background: #003f5c2a;
+  background: #58508d22;
   margin: 0.8rem 0;
   border-radius: 4px;
   padding: 1rem;
@@ -218,7 +218,7 @@ pre {
 }
 
 code {
-  background: #003f5c35;
+  background: #58508d55;
   padding: .15rem .3rem;
   border-radius: 4px;
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, 'Roboto Mono', monospace;
@@ -259,16 +259,16 @@ thead th {
 
 .callout,
 blockquote {
-  border-left: 4px solid #003f5c;
+  border-left: 4px solid #58508d3e;
   padding: 0.6rem 1rem;
-  background: #003f5c2a;
+  background: #58508d20;
   margin: 0.8rem 0;
   border-radius: 4px;
 }
 
 form {
   margin: 1rem 0;
-    font-size: 0.85rem;
+  font-size: 0.85rem;
 }
 
 .form-row {
@@ -282,30 +282,40 @@ input[type="text"],
 textarea,
 select {
   padding: .33rem .6rem;
-  border-radius: 6px;
-  border: 1px solid #8f8f8f30;
-  background: #0b0b0baa;
+  background-color: #252526;
+  border: 1px solid #2f2f2f;
+  border-radius: .25rem;
   color: inherit;
 }
 
-input[type="text"]::-moz-focus-inner,
-button::-moz-focus-inner {
-  border: 0;
+input[type="text"]::placeholder,
+textarea::placeholder {
+  color: #8f8f8fd4;
 }
 
-input:focus, select:focus {
-  outline: 2px solid #003f5c5b;
+input[type="text"]:focus,
+textarea:focus {
+  outline: none;
+  border-color: #58508d;
 }
+
+input[type="text"]:focus-within {
+  background-color: #202020;
+  border-color: #58508d45;
+  box-shadow: 0 3px 9px rgba(165, 99, 241, 0.15);
+}
+
 
 select {
   background-size: 1rem;
   padding-right: 2rem;
   color: #8f8f8fd4;
   border: 2px solid transparent;
+  min-width: 250px;
 }
 
 #role:hover {
-    border:  2px solid #003f5c5b;
+    border:  2px solid #58508d45;
 }
 
 #role:focus {
@@ -320,7 +330,7 @@ select, select::picker(select) {
 select::picker(select) {
   color: #ffffff78;
   background-color: #1a1a1a;
-   border:  2px solid #003f5c5b;
+  border:  2px solid #58508d45;
   border-radius: 6px;
   padding: 5px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
@@ -345,7 +355,7 @@ h3.chart-title {
 
 /* Content styles for example page */
 .content-prose {
-  max-width: 72ch;
+  max-width: 80ch;
   margin: 1.5rem auto;
   color: rgba(255, 255, 255, 0.92);
 }

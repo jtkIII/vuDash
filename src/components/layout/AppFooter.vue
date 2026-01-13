@@ -44,10 +44,11 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 6px 20px;
+    padding: 6px 0;
     background-color: #171717;
     color: #cfcfcf;
     font-size: 14px;
+    text-align: center;
   }
 
   .footer-right a {
