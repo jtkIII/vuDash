@@ -145,13 +145,13 @@ onBeforeUnmount(() => {
 
 .value {
     font-size: 36px;
-    font-weight: 600;
+    font-weight: 800;
     line-height: 1;
 }
 
 .delta {
     font-size: 12px;
-    font-weight: 500;
+    font-weight: 700;
 }
 
 .delta.up {
@@ -186,4 +186,12 @@ onBeforeUnmount(() => {
         grid-template-columns: 1fr;
     }
 }
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
 </style>
