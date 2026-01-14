@@ -1,4 +1,5 @@
 <template>
+  <!-- This and confirm modal are similar, can be refactored -->
   <div class="backdrop" @click.self="cancel">
     <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-describedby="modal-desc"
       tabindex="-1" ref="modalRef" @keydown="onKeydown">
