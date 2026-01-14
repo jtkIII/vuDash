@@ -33,8 +33,9 @@ footer {
   text-align: center;
   font-size: 0.66rem;
   margin-top: 0;
-  background-color: rgba(22, 22, 22, 0.95);
-  /* box-shadow: 0 -6px 18px rgba(0,0,0,0.6); */
+  border-top: 1px solid #7a7a7a31;
+  background-color: rgba(22, 22, 22, 0.753);
+  box-shadow: 0 -6px 18px rgba(0, 0, 0, 0.182);
   z-index: 1000;
 }
   .footer-content, .footer-center {

@@ -1,4 +1,7 @@
 // snapshots, compares, resets
+// usage: const { dirty, commit, reset } = useDirtyState(myRef)
+// this could use some attention by a real programmer to handle edge cases, etc.
+// works for basic use cases but is the most half-baked part of this dashboard
 
 import { ref, computed } from 'vue'
 
@@ -20,11 +23,7 @@ export function useDirtyState(sourceRef) {
     sourceRef.value = deserialize(baseline.value)
   }
 
-  return {
-    dirty,
-    commit,
-    reset
-  }
+  return { dirty, commit, reset }
 }
 
 /* Helpers */

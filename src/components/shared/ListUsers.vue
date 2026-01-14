@@ -32,48 +32,48 @@ const selectedUserId = ref(null)
 const users = [
   {
     id: 1,
-    name: 'Alex Johnson',
-    position: 'Frontend Engineer',
-    blurb: 'Loves Vue, clean UI, and performance optimizations.',
+    name: 'Jimi James',
+    position: 'Digital Prophet',
+    blurb: 'Envisioning the future of technology and innovation.',
     avatar: 'https://i.pravatar.cc/80?img=12',
     online: true
   },
   {
     id: 2,
-    name: 'Maria Lopez',
-    position: 'Product Designer',
-    blurb: 'Focused on usability, accessibility, and delightful UX.',
+    name: 'Karen Lopez',
+    position: 'Security Princess',
+    blurb: 'Focused on keeping the team safe.',
     avatar: 'https://i.pravatar.cc/80?img=32',
     online: false
   },
   {
     id: 3,
-    name: 'Linda Linda',
-    position: 'Backend Developer',
-    blurb: 'API specialist with a passion for scalable systems.',
+    name: 'Lee Liu',
+    position: 'Chief Happiness Officer',
+    blurb: 'A dedicated advocate for employee well-being?',
     avatar: 'https://i.pravatar.cc/80?img=45',
     online: true
   },
   {
     id: 4,
     name: 'Sam Shades',
-    position: 'QA Engineer',
-    blurb: 'Ensures top-notch quality through rigorous testing.',
+    position: 'UX Wizard',
+    blurb: 'Blending design and development seamlessly.',
     avatar: 'https://i.pravatar.cc/80?img=68',
     online: false
   },
   {
     id: 5,
     name: 'David Kendall',
-    position: 'DevOps Engineer',
-    blurb: 'Automates deployments and maintains infrastructure.',
+    position: 'Growth Hacker',
+    blurb: 'Driving user acquisition and engagement to new heights.',
     avatar: 'https://i.pravatar.cc/80?img=15',
     online: true
   },
   {
     id: 6,
     name: 'James Turner',
-    position: 'Fullstack Developer',
+    position: 'Ninjaneer',
     blurb: 'Bridges frontend and backend with seamless solutions.',
     avatar: 'https://i.pravatar.cc/80?img=33',
     online: true  
@@ -81,8 +81,8 @@ const users = [
   {
     id: 7,
     name: 'Sophie Chen',
-    position: 'UI/UX Designer',
-    blurb: 'Creates intuitive designs that users love.',
+    position: 'Chief Vibes Officer',
+    blurb: 'Cultivating a effective workplace culture.',
     avatar: 'https://i.pravatar.cc/80?img=22',
     online: false
   }
