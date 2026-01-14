@@ -1,14 +1,25 @@
 <template>
   <main class="content-prose">
-    <h2>About VuDash</h2>
-    <p>VuDash is a small demo dashboard built with Vue and Vite to showcase layout and typographic patterns. This page
+    <h2>About v-dash</h2>
+    <p>v-dash is a small demo dashboard built with Vue and Vite to showcase layout and typographic patterns. This page
       demonstrates how basic content will look across the app including headings, lists, tables, forms, code, and
       components. This page serves as a reference for styling and layout while the other
-      pages are more custom components.</p>
+      pages are more custom components ala <em>emphasis</em>, and <code>inline code</code> to highlight text. Here's an
+      example link to the <a href="/">home page</a>.</p>
 
-    <h3>Headings & Text</h3>
-    <p>Use <strong>strong</strong>, <em>emphasis</em>, and <code>inline code</code> to highlight text. Here's an example
-      link to the <a href="/">home page</a>.</p>
+    <ContentSep />
+
+    <p>
+      This dashboard doesn't use any external CSS frameworks — all styles are custom built for v-dash. it also features
+      a custom modal system built with Vue's Composition API. Feel free to explore the code on <a href="#">GitHub</a> to
+      see how everything is implemented.
+    </p>
+
+    <ContentSep />
+
+    <h3>Settings and Slots</h3>
+    <p>Check out <strong>the /components/settings dir</strong> and SettingsView to see the slick settings components.
+      Idiomatic Vue patterns are used throughout the app.</p>
 
     <ContentSep />
 
@@ -107,7 +118,7 @@
   return `Hello, ${name}!`
 }</code></pre>
 
-  <ContentSep />
+    <ContentSep />
 
     <h3>Form Elements</h3>
     <form @submit.prevent="onSubmit" class="about-form" aria-label="about form">
@@ -138,7 +149,7 @@
     <ContentSep />
 
     <div class="about-img">
-        <a @click="jtkClick" class="click-me"><img src="/jtk.webp" id="jtk" alt="Coded by Jtk" /></a>
+      <a @click="jtkClick" class="click-me"><img src="/jtk.webp" id="jtk" alt="Coded by Jtk" /></a>
     </div>
 
   </main>
@@ -172,7 +183,7 @@ const form = reactive({
 })
 
 const onSubmit = async () => {
-  return await confirm({
+  return await notice({
     title: form.name
       ? `Thanks, ${form.name}!`
       : 'Thanks for submitting!',
@@ -180,7 +191,7 @@ const onSubmit = async () => {
       ? 'You have been subscribed to updates.'
       : 'You have not been subscribed to updates.',
     confirmText: 'Achtung!',
-    cancelText: 'Back 2 Safety',
+    // cancelText: 'Back 2 Safety',
     variant: 'danger'
   })
 }
@@ -197,7 +208,7 @@ const jtkClick = async () => {
 const utilityClick = async () => {
   return await confirm({
     title: 'Custom CSS Styles',
-    message: 'No external CSS frameworks here! All styles are custom built for VuDash.',
+    message: 'No external CSS frameworks here! All styles are custom built for v-dash.',
     confirmText: 'Cool',
     cancelText: 'okay',
     variant: 'standard'
@@ -223,26 +234,25 @@ const reset = () => {
 
 
 <style scoped>
-
 .click-me {
   cursor: pointer;
   /* color: #6365f1; */
   /* text-decoration: underline; */
 }
 
-  .about-img {
-    width: fit-content;
-    text-align: center;
-    margin: 2rem auto;
-  }
+.about-img {
+  width: fit-content;
+  text-align: center;
+  margin: 2rem auto;
+}
 
-  img#jtk{
-    width: 120px;
-    height: auto;
-    border-radius: 8px;
-    margin-top: 1rem;
-    opacity: 0.9;
-  }
+img#jtk {
+  width: 120px;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 1rem;
+  opacity: 0.9;
+}
 
 .flex-list {
   display: flex;
@@ -286,6 +296,7 @@ const reset = () => {
   background: #6365f1ae;
   border-color: #6365f170;
 }
+
 .about-form .form-row input[type="checkbox"]:checked::after {
   content: '';
   position: absolute;
@@ -301,7 +312,7 @@ const reset = () => {
 /* focus for keyboard users */
 .about-form .form-row input[type="checkbox"]:focus {
   outline: none;
-  box-shadow: 0 0 0 3px rgba(99,102,241,.15);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, .15);
 }
 
 .subscribe {
@@ -322,5 +333,4 @@ const reset = () => {
     gap: 8px;
   }
 }
-
 </style>

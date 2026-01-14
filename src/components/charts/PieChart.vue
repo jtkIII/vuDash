@@ -1,23 +1,23 @@
 <template>
-    <div class="chart-card">
-        <h3 class="chart-title">{{ title }}</h3>
+  <div class="chart-card">
+    <h3 class="chart-title">{{ title }}</h3>
 
-        <svg class="pie-chart" viewBox="0 0 200 200" width="200" height="200">
-            <g transform="translate(100, 100)">
-                <template v-for="(slice, index) in slices" :key="index">
-                    <path :d="slice.path" :fill="slice.color" class="slice" />
-                </template>
-            </g>
-        </svg>
+    <svg class="pie-chart" viewBox="0 0 200 200" width="200" height="200">
+      <g transform="translate(100, 100)">
+        <template v-for="(slice, index) in slices" :key="index">
+          <path :d="slice.path" :fill="slice.color" class="slice" />
+        </template>
+      </g>
+    </svg>
 
-        <ul class="legend">
-            <li v-for="(item, index) in data" :key="index">
-                <span class="legend-color" :style="{ backgroundColor: item.color }" />
-                <span class="legend-label">{{ item.label }}</span>
-                <span class="legend-value">{{ item.value }}%</span>
-            </li>
-        </ul>
-    </div>
+    <ul class="legend">
+      <li v-for="(item, index) in data" :key="index">
+        <span class="legend-color" :style="{ backgroundColor: item.color }" />
+        <span class="legend-label">{{ item.label }}</span>
+        <span class="legend-value">{{ item.value }}%</span>
+      </li>
+    </ul>
+  </div>
 </template>
 
 <script setup>
@@ -26,7 +26,7 @@ import { computed } from 'vue'
 const props = defineProps({
   title: {
     type: String,
-    default: 'Yout Teams Project Status Breakdown'
+    default: 'Your Teams Project Status Breakdown'
   },
   data: {
     type: Array,
@@ -57,10 +57,8 @@ const slices = computed(() => {
   return props.data.map(item => {
     const angle = (item.value / total.value) * Math.PI * 2
     const endAngle = startAngle + angle
-
     const start = polarToCartesian(radius, startAngle)
     const end = polarToCartesian(radius, endAngle)
-
     const largeArc = angle > Math.PI ? 1 : 0
 
     const path = `
@@ -79,9 +77,9 @@ const slices = computed(() => {
   })
 })
 </script>
+
+
 <style scoped>
-
-
 .pie-chart {
   display: block;
   margin: 0 auto 16px;
@@ -97,7 +95,6 @@ const slices = computed(() => {
   transform: scale(1.03);
 }
 
-/* Legend */
 .legend {
   list-style: none;
   padding: 0;
@@ -129,5 +126,4 @@ const slices = computed(() => {
 .legend-value {
   color: rgba(255, 255, 255, 0.6);
 }
-
 </style>

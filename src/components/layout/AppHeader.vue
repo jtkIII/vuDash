@@ -1,7 +1,7 @@
 <template>
   <header>
     <section id="heading">
-      <h1><a href="/">vudash</a></h1>
+      <h1><a href="/">v-dash</a></h1>
       <nav>
         <ul class="nav-links">
           <li><router-link to="/">home</router-link></li>

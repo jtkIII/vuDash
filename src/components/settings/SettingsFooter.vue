@@ -7,11 +7,11 @@
         </div>
 
         <div class="actions">
-            <button class="btn secondary" type="button" @click="$emit('cancel')">
+            <button class="btn secondary" type="button" @click="cancelSave">
                 Cancel
             </button>
 
-            <button class="btn primary" type="button" @click="$emit('save')">
+            <button class="btn primary" type="button" @click="onSubmit">
                 Save
             </button>
         </div>
@@ -19,14 +19,49 @@
 </template>
 
 <script setup>
-defineProps({
+import { watch } from 'vue'
+import { confirm, notice } from '@/composables/useModal'
+const props = defineProps({
   dirty: {
     type: Boolean,
     default: false
-  }
+  },
+    modelValue: Boolean,
+  autoCommit: { type: Boolean, default: true }
 })
 
-defineEmits(['save', 'cancel'])
+const emit = defineEmits(['save', 'cancel','update:modelValue', 'commit'])
+
+watch(
+  () => props.modelValue,
+  () => {
+    if (props.autoCommit) {
+      emit('commit')
+    }
+  }
+)
+
+const cancelSave = async () => {
+  emit('cancel')
+    return await notice({
+    title: 'Canceled Changes',
+    message: 'Maybe this is for the best....',
+    confirmText: 'Ok Then',
+    variant: 'purple'
+  })
+}
+
+const onSubmit = async () => {
+  emit('save')
+  return await confirm({
+    title: 'Save Changes?',
+    message: 'Are you sure you want to save these changes?',
+    confirmText: 'Save?',
+    cancelText: 'Undo!',
+    variant: 'standard'
+  })
+}
+
 </script>
 
 <style scoped>

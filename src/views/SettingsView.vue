@@ -10,6 +10,12 @@ import SettingAction from '@/components/settings/SettingAction.vue'
 import SettingsFooter from '@/components/settings/SettingsFooter.vue'
 import { confirm } from '@/composables/useModal'
 import { useDirtyState } from '@/composables/useDirtyState'
+const hash = ref('')
+const notificationsEnabled = ref(true)
+const emailUpdates = ref(false)
+const theme = ref('dark')
+const username = ref('Jtk')
+const crypto = ref('bitcoin')
 
 const props = defineProps({
   modelValue: Boolean,
@@ -29,13 +35,14 @@ watch(
 
 const settings = ref({
   notifications: true,
-  theme: 'dark',
-  username: 'Jtk',
+  theme: theme.value,
+  username: username.value,
+  hash: hash.value,
+  crypto: crypto.value
 })
 
 const { dirty, commit, reset } = useDirtyState(settings)
 
-// onBeforeRouteLeave(async () => {
 onBeforeRouteLeave(async () => {
   if (dirty.value) {
   return await confirm({
@@ -48,10 +55,14 @@ onBeforeRouteLeave(async () => {
 }
 })
 
-
 const original = JSON.stringify(settings.value)
 
 function save() {
+  if (isHashValid(hash.value)) {
+    settings.value.hash = hash.value
+  } else {
+    settings.value.hash = ''
+  }
   Object.assign(settings.value, JSON.parse(JSON.stringify(settings.value)))
 }
 
@@ -59,11 +70,14 @@ function cancel() {
   settings.value = JSON.parse(original)
 }
 
-const notificationsEnabled = ref(true)
-const emailUpdates = ref(false)
-const theme = ref('dark')
-const username = ref('Jtk')
-const crypto = ref('bitcoin')
+
+const dirtySettings = ref({
+  notificationsEnabled: notificationsEnabled.value,
+  emailUpdates: emailUpdates.value,
+  theme: theme.value,
+  username: username.value,
+  crypto: crypto.value
+})
 
 const resetSettings = () => {
   notificationsEnabled.value = false
@@ -81,6 +95,11 @@ const clearCache = async () =>{
     cancelText: 'Stay',
     variant: 'danger'
   })
+}
+
+const isHashValid = (inputHash) => {
+  const hashPattern = /^[a-fA-F0-9]{64}$/
+  return hashPattern.test(inputHash)
 }
 
 </script>
@@ -114,6 +133,10 @@ const clearCache = async () =>{
         { value: 'ethereum', label: 'Ethereum' },
         { value: 'solana', label: 'Solana' }
       ]" />
+    </SettingsRow>
+
+    <SettingsRow label="Hash" description="Enter the provided hash value">
+      <SettingInput v-model="hash" placeholder="Enter hash" />
     </SettingsRow>
 
     <SettingsRow label="Clear cache" description="Remove locally stored temporary data">
