@@ -11,7 +11,7 @@
 
     <p>
       This dashboard doesn't use any external CSS frameworks — all styles are custom built for v-dash. it also features
-      a custom modal system built with Vue's Composition API. Feel free to explore the code on <a href="#">GitHub</a> to
+      a custom modal system built with Vue's Composition API. Feel free to explore the code on <a href="https://github.com/jtkIII/v-dash">GitHub</a> to
       see how everything is implemented.
     </p>
 
