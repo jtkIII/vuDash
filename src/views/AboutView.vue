@@ -23,7 +23,7 @@
 
     <ContentSep />
 
-    <h2>Grid & Cards</h2>
+    <h3>Grid & Cards</h3>
     <div class="grid-cards">
       <article class="card">
         <h4>Card One</h4>
@@ -45,7 +45,7 @@
 
     <ContentSep />
 
-    <h2>Table</h2>
+    <h3>Table</h3>
     <table>
       <thead>
         <tr>
@@ -80,7 +80,7 @@
 
     <ContentSep />
 
-    <h4>Blockquote</h4>
+    <h3>Blockquote</h3>
     <blockquote>"Good design is as little design as possible." — Dieter Rams</blockquote>
 
     <div class="flex-list">

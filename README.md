@@ -43,21 +43,44 @@ Open the URL shown in the terminal to confirm it works.
 ##### Project Structure
 
 ```
+docs/
+public/
 src/
 ├── assets/
+│   ├── style.css
+│   ├── variables.css
+│   ├── reset.css
 ├── components/
-│   ├── AppHeader.vue
-│   └── AppFooter.vue
+│   ├── charts
+│   └── layout
+│   ├── modals
+│   └── search
+│   ├── settings
+│   └── shared
+├── compostables/
+│   ├── useDirtyState.js
+│   └── useModal.js
 ├── views/
 │   ├── HomeView.vue
 │   └── AboutView.vue
+│   ├── EvenMore.vue
+│   └── Settings.vue
 ├── router/
 │   └── index.js
 ├── store/
 │   └── state.js
 ├── App.vue
 └── main.js
+└── style.css
 ```
+
+- components/ – Reusable UI components, grouped by feature (charts, modals, search, etc.)
+- views/ – Route-level views used by Vue Router
+- composables/ – Reusable Composition API logic (e.g. modal state, shared behaviors)
+- store/ – Application state management
+- router/ – Vue Router configuration
+- assets/ – Static assets and media
+
 
 ##### Simple Global State (No Pinia)
 - src/store/state.js

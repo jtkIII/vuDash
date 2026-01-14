@@ -1,0 +1,50 @@
+:root {
+
+  /* layout */
+  --footer-height: 48px;
+  --full-height: 100vh;
+
+  /* colors */
+  --bg-app: #1e1e1e;
+  --bg-dark-surface: #1616168f;
+  --bg-dark-surface-active: #1616165b;
+  --bg-surface: #252526;
+
+  --border-subtle: #2f2f2fa2;
+  --border-transparent: 1px solid transparent;
+  --yellow: #ffa600;
+  --orange: #ff7c43;
+  --pink: #f95d6a;
+  --red: #d45087;
+  --fushia: #a05195;
+  --purple: #665191;
+  --blue: #003f5c;
+
+
+  /* buttons */
+
+  /* fonts */
+  --font-family-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-family-mono: "Fira Code", "Fira Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, 'Roboto Mono', monospace;
+
+  /* text */
+  --text-primary: rgba(255, 255, 255, 0.87);
+  --text-secondary: rgba(255, 255, 255, 0.633);
+  --text-muted: rgba(255, 255, 255, 0.5);
+
+  /* radius */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+
+  /* spacing */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+
+  /* z-index layers */
+  --z-modal-backdrop: 900;
+  --z-modal-layout: 950;
+  --z-modal: 1000;
+  --z-tooltip: 1100;
+}

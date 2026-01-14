@@ -1,0 +1,11 @@
+:root[data-theme="light"] {
+  --bg-app: #ffffff;
+  --bg-surface: #f7f7f8;
+  --border-subtle: #dcdcdc;
+
+  --text-primary: rgba(0, 0, 0, 0.87);
+  --text-muted: rgba(0, 0, 0, 0.5);
+
+  --accent: #6366f1;
+  --accent-hover: #4f46e5;
+}

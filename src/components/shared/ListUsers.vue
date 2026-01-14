@@ -2,9 +2,9 @@
   <div class="user-list">
     <div v-for="user in users" :key="user.id" class="user-card" :class="{ active: user.id === selectedUserId }"
       @click="selectUser(user.id)">
+      
       <div class="avatar-wrapper">
         <img class="avatar" :src="user.avatar" :alt="user.name" />
-
         <span class="status-dot" :class="{ online: user.online, offline: !user.online }" />
       </div>
 
@@ -125,7 +125,7 @@ function selectUser(id) {
 
 /* Hover (non-active) */
 .user-card:hover:not(.active) {
-  background-color: #161616;
+  background-color: var(--bg-dark-surface-active)
 }
 
 /* Active / selected state */
