@@ -3,7 +3,7 @@ import ConfirmModal from '@/components/modals/ConfirmModal.vue'
 import NoticeModal from '@/components/modals/NoticeModal.vue'
 
 export const modal = shallowRef(null)
-let resolver = null
+// let resolver = null
 
 export function open(component, props = {}) {
   return new Promise((resolve) => {
