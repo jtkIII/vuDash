@@ -120,10 +120,13 @@ const slices = computed(() => {
 
 .legend-label {
   flex: 1;
-  color: rgba(255, 255, 255, 0.8);
+  color: var(--text-heading);
+  font-weight: 600;
 }
 
 .legend-value {
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--red);
+  font-size: 13px;
+  font-weight: 600;
 }
 </style>

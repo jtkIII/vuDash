@@ -1,11 +1,24 @@
 :root[data-theme="dark"] {
 
-    /* layout */
+  --bg-app: #1e1e1e;
+
+  --backdrop:  rgba(0, 0, 0, 0.55);
+  --bg-list: #21212285;
+  --bg-surface: #252526;
+  --bg-surface-active: #1616165b;
+  --bg-light: rgba(255, 255, 255, 0.03);
+  --bg-input: #252526;
+
+
+  --border-subtle: #2f2f2f;
+
+    /* text */
+  --text-primary: rgba(255, 255, 255, 0.87);
+  --text-muted: rgba(255, 255, 255, 0.694);
+  --text-secondary: rgba(255, 255, 255, 0.633);
+  --text-heading: #ffffff92;
 
   /* colors */
-  --bg-app: #1e1e1e;
-  --bg-surface: #252526;
-  --border-subtle: #2f2f2f;
   --yellow: #ffa600;
   --orange: #ff7c43;
   --pink: #f95d6a;
@@ -14,8 +27,21 @@
   --purple: #665191;
   --blue: #003f5c;
 
+  /* cards */
+  --bg-card: #232323c3;
+  --border-card: #8f8f8f13;
+
+  --bg-modal: #1e1e1ef2;
+  --border-modal: #302f31ef;
 
   /* buttons */
-
-  
+  --bg-button: #58508d8d;
+  --bg-secondary: #2f2f2f;
+  --bg-hover: #827ab3a4;
+  --bg-active: #363636;
+  --text-button: #ffffff99;
+ 
+  /* tags */
+  --border-fat: #58508d25;
+  --bg-main: #58508d3c;
 }

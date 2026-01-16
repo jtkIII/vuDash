@@ -1,5 +1,5 @@
 <template>
-    <input class="input" :type="type" :value="modelValue" :placeholder="placeholder" @input="onInput" />
+  <input class="input" :type="type" :value="modelValue" :placeholder="placeholder" @input="onInput" />
 </template>
 
 <script setup>
@@ -27,21 +27,21 @@ function onInput(event) {
 
 <style scoped>
 .input {
-  background-color: #252526;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 8px;
+  background-color: var(--bg-input);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
   padding: 6px 10px;
   font-size: 13px;
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--text-primary);
   min-width: 180px;
 }
 
 .input::placeholder {
-  color: rgba(255, 255, 255, 0.35);
+  color: var(--mid);
 }
 
 .input:focus-visible {
-  outline: 2px solid #6366f1;
+  outline: 2px solid var(--border-card);
   outline-offset: 2px;
 }
 </style>

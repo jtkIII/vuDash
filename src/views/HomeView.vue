@@ -1,7 +1,5 @@
 <template>
-  
     <div class="cards-grid">
-      
       <div class="card">
         <CardHeader title="Team Members" subtitle="Overview of the team and their roles." />
         <ListUsers />
@@ -16,15 +14,11 @@
       <div class="card">
         <CardHeader title="Global Search" subtitle="Find users, messages, files, and more." />
         <GlobalSearch @select="handleSelect" />
-        
         <ContentSep />
-        
         <CardHeader title="Activity Feed" subtitle="Recent activity in the workspace." />
         <ActivityFeed @select="handleSelect" />
       </div>
-
     </div>
-  
 </template>
 
 <script setup>
@@ -52,15 +46,4 @@ function handleSelect({ group, item }) {
   gap: 16px;
 }
 
-.card {
-  padding: .5rem;
-  border-radius: 8px;
-  background: #262626;
-}
-
-.card h3 {
-  margin-bottom: 0.1rem;
-  font-size: small;
-  color: #ffffff92;
-}
 </style>

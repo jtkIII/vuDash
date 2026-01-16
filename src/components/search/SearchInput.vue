@@ -47,22 +47,22 @@ function clear() {
   position: relative;
   display: flex;
   align-items: center;
-  background-color: #252526;
-  border: 1px solid #2f2f2f;
+  background-color: var(--bg-input);
+  border: 1px solid var(--border-subtle);
   border-radius: 10px;
   padding: 0 10px;
   height: 40px;
 }
 
 .search-input:focus-within {
-  background-color: #202020;
-  border-color: #58508d45;
-  box-shadow: 0 3px 9px rgba(165, 99, 241, 0.15);
+  background-color: none;
+  border-color: transparent;
+  box-shadow: 0 3px 9px var(--shadow-button);
 }
 
 .icon {
   font-size: 14px;
-  color: rgba(255, 255, 255, 0.5);
+  color: var(--mid);
 }
 
 .search-icon {
@@ -75,23 +75,23 @@ input {
   background: transparent;
   border: none;
   outline: none;
-  color: rgba(255, 255, 255, 0.87);
+  color: var(--text-primary);
   font-size: 13px;
 }
 
 input::placeholder {
-  color: rgba(255, 255, 255, 0.4);
+  color: var(--text-primary);
 }
 
 .clear {
   background: none;
   border: none;
-  color: rgba(255, 255, 255, 0.5);
+  color: var(--mid);
   cursor: pointer;
   font-size: 14px;
 }
 
 .clear:hover {
-  color: rgba(255, 255, 255, 0.8);
+  color: var(--text-muted);
 }
 </style>

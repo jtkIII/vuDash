@@ -36,7 +36,7 @@ defineProps({
     justify-content: space-between;
     gap: 16px;
     padding: 12px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid var(--border-subtle);
 }
 
 .settings-row:last-child {
@@ -51,13 +51,13 @@ defineProps({
 .label {
     font-size: 14px;
     font-weight: 500;
-    color: rgba(255, 255, 255, 0.9);
+    color: var(--text-primary);
 }
 
 .description {
     margin-top: 2px;
     font-size: 12px;
-    color: rgba(255, 255, 255, 0.55);
+    color: var(--mid);
 }
 
 .control {
@@ -68,7 +68,7 @@ defineProps({
 
 /* Hover affordance */
 .settings-row:hover {
-    background-color: rgba(255, 255, 255, 0.02);
+    background-color: var(--bg-light);
 }
 
 /* Mobile stacking */

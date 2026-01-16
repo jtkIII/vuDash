@@ -31,12 +31,12 @@ function onChange(event) {
 <style scoped>
 .select {
     appearance: none;
-    background-color: #252526;
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    border-radius: 8px;
+    background-color: var(--bg-input);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
     padding: 6px 28px 6px 10px;
     font-size: 13px;
-    color: rgba(255, 255, 255, 0.9);
+    color: var(--text-primary);
     cursor: pointer;
     min-width: 140px;
     background-image:
@@ -50,11 +50,11 @@ function onChange(event) {
 }
 
 .select:focus-visible {
-    outline: 2px solid #6366f1;
+    outline: 2px solid var(--purple);
     outline-offset: 2px;
 }
 
 .select option {
-    background-color: #1e1e1e;
+    background-color: var(--bg-input);
 }
 </style>

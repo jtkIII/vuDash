@@ -34,7 +34,7 @@ defineProps({
 }
 
 .settings-section .header{
-    background-color: #1e1e1e84;
+    background-color: var(--bg-surface);
     padding: 5px;
 }
 
@@ -45,20 +45,20 @@ defineProps({
 .title {
   font-size: 15px;
   font-weight: 600;
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--text-heading);
 }
 
 .description {
   margin-top: 2px;
   font-size: 13px;
-  color: rgba(255, 255, 255, 0.55);
+  color: var(--text-muted);
 }
 
 .rows {
   margin-top: 8px;
-  background-color: #1e1e1e;
+  background-color: var(--bg-list);
   border-radius: 12px;
   padding: 0;
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--border-subtle);
 }
 </style>

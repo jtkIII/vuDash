@@ -1,11 +1,50 @@
 :root[data-theme="light"] {
+
   --bg-app: #ffffff;
-  --bg-surface: #f7f7f8;
-  --border-subtle: #dcdcdc;
 
+  --backdrop:  rgba(255, 255, 255, 0.55);
+  --bg-list: #efecf285;
+  --bg-surface: #58508d12;
+  --bg-surface-active: #e4e4e45b;
+  --bg-light: rgba(0, 0, 0, 0.03);
+  --bg-input: #e8e8ee;
+
+  --border-subtle: #dcdcdcdd;
+
+
+  /* text */
   --text-primary: rgba(0, 0, 0, 0.87);
-  --text-muted: rgba(0, 0, 0, 0.694);
+  --text-muted: rgba(169, 155, 155, 0.694);
+  --text-secondary: rgba(34, 34, 92, 0.801);
+  --text-heading: #47474790;
+  
 
-  --accent: #6366f1;
-  --accent-hover: #4f46e5;
+  /* colors */
+  --yellow: #eb7200;
+  --orange: #ff7c43;
+  --pink: #f95d6a;
+  --red: #d45087;
+  --fushia: #a05195;
+  --purple: #4e17bd;
+  --blue: #003f5c;
+
+  /* cards */
+  --bg-card: #58508d12;
+  --border-card: #dcdcdc13;
+
+  --bg-modal: #e5e3ecf2;
+  --border-modal: #ddd9e1ef;
+
+  /* buttons */
+  --bg-button: #58508dd5;
+  --bg-secondary: #2f2f2f3a;
+  --bg-hover: #827ab36a;
+  --bg-active: #5c5b5d5c;
+  --text-button: #ffffff99;
+
+  /* tags */
+  --border-fat: #58508d46;
+  --bg-main: #58508d12;
+
+
 }

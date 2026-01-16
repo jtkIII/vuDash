@@ -35,7 +35,8 @@ import {
   MessageSquare,
   FileText,
   Link2,
-  UserPlus
+  UserPlus,
+  Video
 } from 'lucide-vue-next'
 import { ref } from 'vue'
 
@@ -46,7 +47,8 @@ const icons = {
   message: MessageSquare,
   file: FileText,
   link: Link2,
-  user: UserPlus
+  user: UserPlus,
+  video: Video
 }
 
 /* Mock data */
@@ -120,6 +122,18 @@ const activities = ref([
       name: 'Tom',
       avatar: 'https://i.pravatar.cc/32?img=12'
     }
+  },
+    {
+    id: 7,
+    type: 'video',
+    title: 'The New Hotness',
+    meta: 'hot.mp4',
+    time: 'Last week',
+    unread: true,
+    user: {
+      name: 'Christopher',
+      avatar: 'https://i.pravatar.cc/32?img=51s'
+    }
   }
 ])
 
@@ -141,9 +155,9 @@ function select(activity) {
 }
 
 .activity-feed {
-  background-color: #1e1e1e85;
-  border: 1px solid #2f2f2f;
-  border-radius: 12px;
+  background-color: var(--bg-list);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
   padding: 12px
 }
 
@@ -169,15 +183,15 @@ function select(activity) {
 }
 
 .item.read {
-  background-color: #252526;
+  background-color: var(--bg-surface);
 }
 
 .item.read .text {
-  color: rgba(255, 255, 255, 0.78);
+  color: var(--text-heading);
 }
 
 .item.read .meta {
-  color: rgba(255, 255, 255, 0.42);
+  color: var(--text-secondary);
 }
 
 /* Avatar */
@@ -193,11 +207,11 @@ function select(activity) {
 .icon {
   width: 16px;
   height: 16px;
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--mid);
 }
 
 .item.unread .icon {
-  color: #6366f1;
+  color: var(--purple);
 }
 
 /* Content */
@@ -210,11 +224,12 @@ function select(activity) {
 
 .text {
   font-size: 13px;
+  color: var(--text-heading);
 }
 
 .meta {
   font-size: 12px;
-  color: rgba(255, 255, 255, 0.5);
+  color: var(--text-secondary);
 }
 
 /* Unread / read dot */
@@ -229,7 +244,7 @@ function select(activity) {
 }
 
 .unread-dot {
-  background-color: #6366f1;
+  background-color: var(--purple);
 }
 
 .read-dot {

@@ -71,8 +71,8 @@ const onSubmit = async () => {
   justify-content: space-between;
   gap: 16px;
   padding: 12px 16px;
-  background-color: rgba(30, 30, 30, 0.95);
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  background-color: var(--bg-surface);
+  border-top: 1px solid var(--border-subtle);
   backdrop-filter: blur(6px);
   transform: translateY(100%);
   transition: transform 0.2s ease;
@@ -84,7 +84,7 @@ const onSubmit = async () => {
 
 .message {
   font-size: 13px;
-  color: rgba(255, 255, 255, 0.75);
+  color: var(--text-heading);
 }
 
 .actions {

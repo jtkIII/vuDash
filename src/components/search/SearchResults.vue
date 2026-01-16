@@ -74,8 +74,8 @@ function select(group, item) {
 <style scoped>
 .search-results {
   margin-top: 8px;
-  background-color: #1e1e1e;
-  border: 1px solid #2f2f2f;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
   border-radius: 12px;
   max-height: 360px;
   overflow-y: auto;
@@ -85,7 +85,7 @@ function select(group, item) {
 .empty {
   padding: .33rem .66rem;
   font-size: 13px;
-  color: rgba(215, 215, 215, 0.233);
+  color: var(--text-muted);
   text-align: center;
 }
 
@@ -99,7 +99,7 @@ function select(group, item) {
   font-size: 11px;
   font-weight: 600;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.5);
+  color: var(--text-heading);
 }
 
 /* Items */
@@ -125,12 +125,12 @@ function select(group, item) {
 
 .item-title {
   font-size: 13px;
-  color: rgba(255, 255, 255, 0.87);
+    color: var(--text-primary);
 }
 
 .item-meta {
   font-size: 12px;
-  color: rgba(255, 255, 255, 0.5);
+  color: var(--text-heading);
 }
 
 
@@ -138,7 +138,7 @@ function select(group, item) {
   margin-top: 2px;
   width: 16px;
   height: 16px;
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--purple);
   flex-shrink: 0;
 }
 

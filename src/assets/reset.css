@@ -13,9 +13,21 @@
   outline-offset: 2px;
 }
 
+a {
+  color:  var(--purple);
+  text-decoration: inherit;
+}
+
 html {
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
+}
+
+html,
+body,
+#app {
+  line-height: 1.5;
+  font-weight: 400;
 }
 
 img,
@@ -62,6 +74,11 @@ ul[role="list"],
 ol[role="list"] {
   list-style: none;
   padding: 0;
+}
+
+ul,
+ol {
+  padding-left: 1.25rem;
 }
 
 @media (prefers-reduced-motion: reduce) {

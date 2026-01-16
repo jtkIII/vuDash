@@ -85,6 +85,13 @@ const users = [
     blurb: 'Cultivating a effective workplace culture.',
     avatar: 'https://i.pravatar.cc/80?img=22',
     online: false
+  },
+  {id: 8,
+    name: 'Christopher Moltisanti',
+    position: 'Capo',
+    blurb: 'Takes care of business.',
+    avatar: 'https://i.pravatar.cc/80?img=51',
+    online: true
   }
 ]
 
@@ -113,9 +120,9 @@ function selectUser(id) {
   align-items: center;
   gap: 14px;
   padding: 12px 16px;
-  border-radius: 12px;
-  background-color: #232323;
-  border: 1px solid #8f8f8f13;
+  border-radius: var(--radius-md);
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-subtle);
   cursor: pointer;
   transition:
     background-color 0.2s ease,
@@ -125,14 +132,14 @@ function selectUser(id) {
 
 /* Hover (non-active) */
 .user-card:hover:not(.active) {
-  background-color: var(--bg-dark-surface-active)
+  background-color: var(--bg-surface-active)
 }
 
 /* Active / selected state */
 .user-card.active {
-  background-color: #202020;
-  border-color: #58508d45;
-  box-shadow: 0 4px 10px rgba(165, 99, 241, 0.15);
+  background-color: var(--bg-surface-active);
+  border-color: var(--border-subtle);
+  box-shadow: 0 4px 10px var(--shadow-button);
 }
 
 /* Avatar wrapper */
@@ -154,7 +161,7 @@ function selectUser(id) {
 
 /* Avatar ring when active */
 .user-card.active .avatar {
-  box-shadow: 0 0 0 2px #7b63f1c9;
+  box-shadow: 0 0 0 2px var(--purple)
 }
 
 /* Status dot */
@@ -165,18 +172,18 @@ function selectUser(id) {
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  border: 2px solid #ffffff;
+  border: 2px solid white;
 }
 
 /* Online status */
 .status-dot.online {
-  background-color: #58508d;
+  background-color: var(--purple);
   box-shadow: 0 0 6px rgba(94, 34, 197, 0.7);
 }
 
 /* Offline status */
 .status-dot.offline {
-  background-color: #ff6361;
+  background-color: var(--red);
 }
 
 /* User info */
@@ -195,11 +202,10 @@ function selectUser(id) {
 }
 
 /* Name */
-.name {
+h3.name {
   font-size: 15px;
   font-weight: 600;
   margin: 0;
-  color: #003f5c;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -208,19 +214,20 @@ function selectUser(id) {
 /* Position */
 .position {
   font-size: 13px;
-  color: #ffa600;
+  color: var(--yellow);
   white-space: nowrap;
 }
 
 .blurb {
   font-size: 13px;
-  color: #7b7b7c;
+  color: var(--mid);
   margin: 0;
   line-height: 1.2;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-line-clamp: 2;
+  line-clamp: 2;
   -webkit-box-orient: vertical;
 }
 </style>

@@ -109,8 +109,8 @@ watch(
 
 <style scoped>
 .leaderboard {
-  background: #1e1e1e;
-  border: 1px solid #2f2f2f;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
   border-radius: 12px;
   overflow: hidden;
 }
@@ -124,7 +124,7 @@ table {
 th {
   font-size: 11px;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.5);
+  color: var(--mid);
   padding: 10px 12px;
   text-align: left;
 }
@@ -141,8 +141,8 @@ tbody tr {
 }
 
 tbody tr:hover {
-  background-color: #252526;
-  border: 1px solid #fff;
+  background-color: var(--bg-surface-active);
+  border: 1px solid var(--border-subtle);
 }
 
 tbody tr.dragging {
@@ -167,17 +167,17 @@ tbody tr.dragging {
   height: 22px;
   min-width: 22px;
   min-height: 22px;
-  color: rgba(255, 255, 255, 0.45);
+  color: var(--mid);
   transition: color 0.15s ease, transform 0.15s ease;
 }
 
 .drag-handle:hover .handle-icon {
-  color: #6366f1;
+  color: var(--purple);
   transform: scale(1.1);
 }
 
-tbody tr:hover .handle-icon {
-  color: rgba(255, 255, 255, 0.7);
+tbody tr:hover{
+  color: var(--bg-hover);
 }
 
 /* Trend */
@@ -195,7 +195,7 @@ tbody tr:hover .handle-icon {
 
 /* Links */
 a {
-  color: #58508d;
+  color: var(--purple);
   text-decoration: none;
 }
 a:hover {
@@ -207,13 +207,10 @@ a:hover {
 .icon {
   width: 18px;
   height: 18px;
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--mid);
   display: inline-block;
 }
 
-
-
-/* Name inline */
 .name {
   display: inline-flex;
   align-items: center;
@@ -237,7 +234,7 @@ a:hover {
   }
 
   tr {
-    border-bottom: 1px solid #2f2f2f;
+    border-bottom: 1px solid var(--border-subtle);
     padding: 8px 0;
   }
 
@@ -252,7 +249,7 @@ a:hover {
     content: attr(data-label);
     font-size: 11px;
     text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.5);
+    color: var(--mid);
   }
 
   .handle-cell {
