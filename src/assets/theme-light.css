@@ -11,14 +11,12 @@
 
   --border-subtle: #dcdcdcdd;
 
-
   /* text */
   --text-primary: rgba(0, 0, 0, 0.87);
   --text-muted: rgba(169, 155, 155, 0.694);
   --text-secondary: rgba(34, 34, 92, 0.801);
   --text-heading: #47474790;
   
-
   /* colors */
   --yellow: #eb7200;
   --orange: #ff7c43;
@@ -32,6 +30,7 @@
   --bg-card: #58508d12;
   --border-card: #dcdcdc13;
 
+  /* modal */
   --bg-modal: #e5e3ecf2;
   --border-modal: #ddd9e1ef;
 

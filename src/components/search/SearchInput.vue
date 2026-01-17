@@ -1,6 +1,8 @@
 <template>
   <div class="search-input">
-    <span class="icon"><Search class="search-icon" /></span>
+    <span class="icon">
+      <Search class="search-icon" />
+    </span>
 
     <input type="text" :placeholder="placeholder" :value="modelValue" @input="onInput" @focus="$emit('focus')"
       @keydown.escape="$emit('escape')" />
@@ -12,9 +14,11 @@
 </template>
 
 <script setup>
-    import {
+
+import {
   Search
 } from 'lucide-vue-next'
+
 const props = defineProps({
   modelValue: {
     type: String,
@@ -33,6 +37,7 @@ const emit = defineEmits([
 ])
 
 function onInput(event) {
+  // console.log(event.target.value)
   emit('update:modelValue', event.target.value)
 }
 

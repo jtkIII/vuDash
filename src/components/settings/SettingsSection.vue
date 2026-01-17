@@ -36,20 +36,19 @@ defineProps({
 .settings-section .header{
     background-color: var(--bg-surface);
     padding: 5px;
-}
-
-.header {
-  margin-bottom: 8px;
+    margin-bottom: 5px;
+    border-radius: var(--radius-sm);
 }
 
 .title {
   font-size: 15px;
   font-weight: 600;
   color: var(--text-heading);
+  margin: 5px 0 0 5px;
 }
 
 .description {
-  margin-top: 2px;
+  margin: 2px 0 10px 5px;
   font-size: 13px;
   color: var(--text-muted);
 }

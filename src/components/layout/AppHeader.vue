@@ -36,7 +36,7 @@ const links = [
 
 .nav-links li a {
   text-transform: lowercase;
-  font-weight: 500;
+  font-weight: 600;
   font-size: .66rem;
 }
 </style>

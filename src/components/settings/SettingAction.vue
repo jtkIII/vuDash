@@ -47,12 +47,12 @@ defineEmits(['click'])
 
 /* Danger variant */
 .action.danger {
-  background-color: #ff64612c;
+  background-color: var(--red);
   border-color: #ff646159;
-  color: #fca5a5;
+  color: #fdbcbc;
 }
 
 .action.danger:hover {
-  background-color: #ff64613c;
+  background-color: var(--pink);
 }
 </style>

@@ -89,8 +89,3 @@ function onSelect(payload) {
     emit('select', payload)
 }
 </script>
-<style scoped>
-.global-search {
-    max-width: 420px;
-}
-</style>

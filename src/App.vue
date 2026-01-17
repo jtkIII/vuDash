@@ -14,6 +14,7 @@ import AppHeader from './components/layout/AppHeader.vue'
 import AppFooter from './components/layout/AppFooter.vue'
 import ModalHost from '@/components/modals/ModalHost.vue'
 import { useTheme } from '@/composables/useTheme'
-useTheme() // no destructuring needed here
+
+useTheme() // no destructuring needed
 document.documentElement.dataset.theme = 'dark'
 </script>

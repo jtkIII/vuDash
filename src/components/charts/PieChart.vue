@@ -1,4 +1,7 @@
 <template>
+
+  <ContentSep />
+
   <div class="chart-card">
     <h3 class="chart-title">{{ title }}</h3>
 
@@ -22,7 +25,7 @@
 
 <script setup>
 import { computed } from 'vue'
-
+import ContentSep from '../shared/ContentSep.vue'
 const props = defineProps({
   title: {
     type: String,

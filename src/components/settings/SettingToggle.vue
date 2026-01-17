@@ -25,7 +25,7 @@ function toggle() {
   width: 38px;
   height: 22px;
   border-radius: 999px;
-  background-color: rgba(255, 255, 255, 0.15);
+  background-color: var(--mid);
   border: none;
   padding: 2px;
   cursor: pointer;
@@ -35,7 +35,7 @@ function toggle() {
 }
 
 .toggle.on {
-  background-color: #6366f1;
+  background-color: var(--purple);
 }
 
 .thumb {

@@ -29,8 +29,6 @@
   </div>
 </template>
 
-
-
 <script setup>
 import { computed, ref } from 'vue'
 import {
@@ -86,7 +84,6 @@ function select(group, item) {
   padding: .33rem .66rem;
   font-size: 13px;
   color: var(--text-muted);
-  text-align: center;
 }
 
 /* Group */
@@ -132,7 +129,6 @@ function select(group, item) {
   font-size: 12px;
   color: var(--text-heading);
 }
-
 
 .icon {
   margin-top: 2px;

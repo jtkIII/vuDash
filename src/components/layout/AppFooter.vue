@@ -37,13 +37,17 @@ footer {
   right: 0;
   bottom: 0;
   height: var(--footer-height);
-  width: 100%;
+  /* width: 100%; */
   text-align: center;
   font-size: 0.66rem;
-  margin-top: 0;
+  margin: 0 var(--space-md);
+  z-index: 1000;
+}
+
+.footer-content{
   border-top: 1px solid #7a7a7a31;
   box-shadow: 0 -6px 18px rgba(0, 0, 0, 0.12);
-  z-index: 1000;
+
 }
 
 .footer-content,

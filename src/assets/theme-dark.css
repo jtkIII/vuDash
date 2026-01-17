@@ -1,14 +1,11 @@
 :root[data-theme="dark"] {
-
   --bg-app: #1e1e1e;
-
   --backdrop:  rgba(0, 0, 0, 0.55);
   --bg-list: #21212285;
   --bg-surface: #252526;
   --bg-surface-active: #1616165b;
   --bg-light: rgba(255, 255, 255, 0.03);
   --bg-input: #252526;
-
 
   --border-subtle: #2f2f2f;
 
@@ -31,6 +28,7 @@
   --bg-card: #232323c3;
   --border-card: #8f8f8f13;
 
+  /* modal */
   --bg-modal: #1e1e1ef2;
   --border-modal: #302f31ef;
 

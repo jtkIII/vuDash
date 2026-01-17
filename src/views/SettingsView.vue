@@ -10,6 +10,7 @@ import SettingAction from '@/components/settings/SettingAction.vue'
 import SettingsFooter from '@/components/settings/SettingsFooter.vue'
 import { confirm } from '@/composables/useModal'
 import { useDirtyState } from '@/composables/useDirtyState'
+
 const hash = ref('')
 const notificationsEnabled = ref(true)
 const emailUpdates = ref(false)
