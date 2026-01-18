@@ -85,7 +85,7 @@ const posts = ref([
     likes: { count: 27, likedByMe: false },
     comments: { count: 7 }
   },
-    {
+  {
     id: 8,
     name: 'Quite a Spectacle',
     author: 'Tony Romo',
@@ -97,7 +97,8 @@ const posts = ref([
     likes: { count: 7, likedByMe: false },
     comments: { count: 3 }
   },
-  { id: 9,
+  {
+    id: 9,
     name: 'Make an Example',
     author: 'Vito Sapola',
     date: '2026-01-25T22:16:03',
@@ -109,43 +110,46 @@ const posts = ref([
     comments: { count: 6 }
   },
   {
-  id: 10,
-  name: 'The Long Way Around',
-  author: 'Evan Calder',
-  date: '2026-01-26T09:41:18',
-  blurb: 'Detours often reveal more than the straight path ever could.',
-  avatar: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=800&auto=format&fit=crop',
-  read: false,
-  tags: ['process', 'learning', 'growth'],
-  likes: { count: 19, likedByMe: false },
-  comments: { count: 4 }
-},
-{
-  id: 11,
-  name: 'Small Decisions, Big Impact',
-  author: 'Marisa Chen',
-  date: '2026-01-26T17:08:52',
-  blurb: 'Why the tiniest choices in systems design matter the most.',
-  avatar: 'https://images.unsplash.com/photo-1761864293840-cf73a186bff8?q=80&w=800&auto=format&fit=crop',
-  read: true,
-  tags: ['systems', 'design', 'decisions'],
-  likes: { count: 27, likedByMe: true },
-  comments: { count: 8 }
-},
-{
-  id: 12,
-  name: 'When Less Is Enough',
-  author: 'Julian Frost',
-  date: '2026-01-27T11:32:05',
-  blurb: 'Resisting complexity can be the most disciplined choice.',
-  avatar: 'https://images.unsplash.com/photo-1768651122072-8f1843752172?q=80&w=734&auto=format&fit=crop',
-  read: false,
-  tags: ['simplicity', 'minimalism', 'engineering'],
-  likes: { count: 14, likedByMe: false },
-  comments: { count: 3 }
-}
+    id: 10,
+    name: 'The Long Way Around',
+    author: 'Evan Calder',
+    date: '2026-01-26T09:41:18',
+    blurb: 'Detours often reveal more than the straight path ever could.',
+    avatar: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=800&auto=format&fit=crop',
+    read: false,
+    tags: ['process', 'learning', 'growth'],
+    likes: { count: 19, likedByMe: false },
+    comments: { count: 4 }
+  },
+  {
+    id: 11,
+    name: 'Small Decisions, Big Impact',
+    author: 'Marisa Chen',
+    date: '2026-01-26T17:08:52',
+    blurb: 'Why the tiniest choices in systems design matter the most.',
+    avatar: 'https://images.unsplash.com/photo-1761864293840-cf73a186bff8?q=80&w=800&auto=format&fit=crop',
+    read: true,
+    tags: ['systems', 'design', 'decisions'],
+    likes: { count: 27, likedByMe: true },
+    comments: { count: 8 }
+  },
+  {
+    id: 12,
+    name: 'When Less Is Enough',
+    author: 'Julian Frost',
+    date: '2026-01-27T11:32:05',
+    blurb: 'Resisting complexity can be the most disciplined choice.',
+    avatar: 'https://images.unsplash.com/photo-1768651122072-8f1843752172?q=80&w=734&auto=format&fit=crop',
+    read: false,
+    tags: ['simplicity', 'minimalism', 'engineering'],
+    likes: { count: 14, likedByMe: false },
+    comments: { count: 3 }
+  }
 
 ])
+
+const showUnreadOnly = ref(false)
+
 
 /* --------- computed helpers --------- */
 
@@ -158,6 +162,10 @@ const allTags = computed(() => {
   posts.value.forEach(p => p.tags.forEach(tag => set.add(tag)))
   return [...set]
 })
+
+const visiblePosts = computed(() =>
+  showUnreadOnly.value ? unreadPosts.value : posts.value
+)
 
 /* --------- actions --------- */
 
@@ -184,7 +192,9 @@ export function usePosts() {
   return {
     posts,
     unreadPosts,
+    visiblePosts,
     allTags,
+    showUnreadOnly,
     markAsRead,
     toggleLike,
     filterByTag
