@@ -133,31 +133,27 @@ function onMouseLeave() {
 </script>
 
 
-
 <style scoped>
   .chart-card {
   position: relative;
 }
-/* SVG */
+
 .line-chart {
   display: block;
   margin-bottom: 8px;
 }
 
-/* Grid */
 .grid line {
   stroke: rgba(255, 255, 255, 0.08);
   stroke-width: 1;
 }
 
-/* Line */
 .line {
   fill: none;
   stroke: #6366f1;
   stroke-width: 2;
 }
 
-/* Points */
 .points circle {
   fill: #6366f1;
   transition: transform 0.2s ease, fill 0.2s ease;
@@ -182,8 +178,9 @@ function onMouseLeave() {
 .tooltip {
   position: absolute;
   transform: translate(-50%, -120%);
-  background-color: #1e1e1e;
-  border: 1px solid #2f2f2f;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-primary);
   border-radius: 8px;
   padding: 6px 10px;
   font-size: 12px;
@@ -192,7 +189,7 @@ function onMouseLeave() {
 }
 
 .tooltip-label {
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--mid);
 }
 
 .tooltip-value {
@@ -209,7 +206,7 @@ function onMouseLeave() {
   justify-content: space-between;
   margin-top: 8px;
   width: 100%;
-  font-size: 12px;
-  color: rgba(255, 255, 255, 0.6);
+  font-size: var(--txt-sm);
+  color: var(--text-heading);
 }
 </style>

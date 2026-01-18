@@ -1,11 +1,9 @@
 <template>
   <div class="search-results">
-    <!-- Empty state -->
     <div v-if="isEmpty" class="empty">
       Start typing above to search…
     </div>
 
-    <!-- Groups -->
     <template v-else>
       <template v-for="(group, groupKey) in results" :key="groupKey">
         <div v-if="group.length" class="group">
@@ -72,34 +70,31 @@ function select(group, item) {
 <style scoped>
 .search-results {
   margin-top: 8px;
-  background-color: var(--bg-surface);
-  border: 1px solid var(--border-subtle);
-  border-radius: 12px;
+  /* background-color: var(--bg-surface); */
+  /* border: 1px solid var(--border-subtle); */
+  border-radius: var(--radius-md);
   max-height: 360px;
   overflow-y: auto;
 }
 
-/* Empty state */
 .empty {
   padding: .33rem .66rem;
   font-size: 13px;
   color: var(--text-muted);
 }
 
-/* Group */
 .group {
   padding: 8px 0;
 }
 
 .group-title {
   padding: 6px 12px;
-  font-size: 11px;
+  font-size: var(--txt-sm);
   font-weight: 600;
   text-transform: uppercase;
   color: var(--text-heading);
 }
 
-/* Items */
 .items {
   list-style: none;
   margin: 0;
@@ -108,16 +103,17 @@ function select(group, item) {
 
 .item {
   display: flex;
-  flex-direction: row; /* <-- key change */
+  flex-direction: row;
   align-items: flex-start;
   gap: 10px;
   padding: 8px 12px;
   cursor: pointer;
   transition: background-color 0.15s ease;
+  border-bottom: 2px solid var(--border-card)
 }
 
 .item:hover {
-  background-color: #252526;
+  background-color: var(--bg-surface-active);
 }
 
 .item-title {

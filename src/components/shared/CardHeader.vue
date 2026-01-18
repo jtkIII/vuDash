@@ -11,3 +11,7 @@ const props = defineProps({
   subtitle: { type: String, default: 'Overview of the team and their roles.' }
 })
 </script>
+
+<style scoped>
+
+</style>

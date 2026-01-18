@@ -26,9 +26,11 @@
   --purple: #4e17bd;
   --blue: #003f5c;
 
+  --bg-purple: #58508d11;
+
   /* cards */
   --bg-card: #58508d12;
-  --border-card: #dcdcdc13;
+  --border-card: #dcdcdc6d;
 
   /* modal */
   --bg-modal: #e5e3ecf2;

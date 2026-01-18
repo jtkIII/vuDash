@@ -21,6 +21,7 @@ const links = [
   { name: 'home', path: '/', alt: 'dashboard' },
   { name: 'about', path: '/about', alt: 'about v-dash' },
   { name: 'more', path: '/even-more', alt: 'even more features' },
+  { name: 'blog', path: '/blog/main', alt: 'main blog' },
   { name: 'settings', path: '/settings', alt: 'application settings' },
 ]
 </script>

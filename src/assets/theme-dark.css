@@ -24,6 +24,8 @@
   --purple: #665191;
   --blue: #003f5c;
 
+  --bg-purple: #58508d25;
+
   /* cards */
   --bg-card: #232323c3;
   --border-card: #8f8f8f13;
@@ -42,4 +44,5 @@
   /* tags */
   --border-fat: #58508d25;
   --bg-main: #58508d3c;
+
 }

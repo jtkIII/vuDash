@@ -17,93 +17,29 @@
         <p class="blurb">
           {{ user.blurb }}
         </p>
+
       </div>
     </div>
   </div>
 </template>
 
 
-
 <script setup>
 import { ref } from 'vue'
+import { useUsers } from '@/composables/useUsers'
 
+const { users } = useUsers()
 const selectedUserId = ref(null)
-
-const users = [
-  {
-    id: 1,
-    name: 'Jimi James',
-    position: 'Digital Prophet',
-    blurb: 'Envisioning the future of technology and innovation.',
-    avatar: 'https://i.pravatar.cc/80?img=12',
-    online: true
-  },
-  {
-    id: 2,
-    name: 'Karen Lopez',
-    position: 'Security Princess',
-    blurb: 'Focused on keeping the team safe.',
-    avatar: 'https://i.pravatar.cc/80?img=32',
-    online: false
-  },
-  {
-    id: 3,
-    name: 'Lee Liu',
-    position: 'Chief Happiness Officer',
-    blurb: 'A dedicated advocate for employee well-being?',
-    avatar: 'https://i.pravatar.cc/80?img=45',
-    online: true
-  },
-  {
-    id: 4,
-    name: 'Sam Shades',
-    position: 'UX Wizard',
-    blurb: 'Blending design and development seamlessly.',
-    avatar: 'https://i.pravatar.cc/80?img=68',
-    online: false
-  },
-  {
-    id: 5,
-    name: 'David Kendall',
-    position: 'Growth Hacker',
-    blurb: 'Driving user acquisition and engagement to new heights.',
-    avatar: 'https://i.pravatar.cc/80?img=15',
-    online: true
-  },
-  {
-    id: 6,
-    name: 'James Turner',
-    position: 'Ninjaneer',
-    blurb: 'Bridges frontend and backend with seamless solutions.',
-    avatar: 'https://i.pravatar.cc/80?img=33',
-    online: true  
-  },
-  {
-    id: 7,
-    name: 'Sophie Chen',
-    position: 'Chief Vibes Officer',
-    blurb: 'Cultivating a effective workplace culture.',
-    avatar: 'https://i.pravatar.cc/80?img=22',
-    online: false
-  },
-  {id: 8,
-    name: 'Christopher Moltisanti',
-    position: 'Capo',
-    blurb: 'Takes care of business.',
-    avatar: 'https://i.pravatar.cc/80?img=51',
-    online: true
-  }
-]
 
 const emit = defineEmits(['select'])
 
 function selectUser(id) {
   selectedUserId.value = id
+  // console.log(id)
   emit('select', id)
 }
 
 </script>
-
 
 
 <style>
@@ -114,12 +50,11 @@ function selectUser(id) {
   gap: 12px;
 }
 
-/* User card */
 .user-card {
   display: flex;
   align-items: center;
   gap: 14px;
-  padding: 12px 16px;
+  padding: 8px 12px;
   border-radius: var(--radius-md);
   background-color: var(--bg-card);
   border: 1px solid var(--border-subtle);
@@ -132,7 +67,8 @@ function selectUser(id) {
 
 /* Hover (non-active) */
 .user-card:hover:not(.active) {
-  background-color: var(--bg-surface-active)
+  background-color: var(--bg-surface-active);
+  border: 1px solid var(--border-subtle);
 }
 
 /* Active / selected state */
@@ -142,7 +78,6 @@ function selectUser(id) {
   box-shadow: 0 4px 10px var(--shadow-button);
 }
 
-/* Avatar wrapper */
 .avatar-wrapper {
   position: relative;
   width: 48px;
