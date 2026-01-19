@@ -5,7 +5,7 @@ I am new to composables!  I've done a fair amount of Vue and more web projects t
 
 ### In the context of Vue applications, a "composable" is a function that leverages Vue's Composition API to encapsulate and reuse stateful logic.
 
-[https://vuejs.org/guide/reusability/composables.html](Composable)
+[Composable](https://vuejs.org/guide/reusability/composables.html)
 
 Still, I think that I have the hang of them but if you see anything that can be done better I wouldn't be surprised and please, feel free.
 
