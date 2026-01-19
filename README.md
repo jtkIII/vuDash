@@ -3,11 +3,13 @@
 
 ### I'm going for “UI-complete for mock stage”.
 
-✅ Node.js + npm
-✅ Vue 3 via Vite
-✅ Vue Router
-✅ Minimal Dependencies
-✅ Simple state (using reactive store — lighter than Pinia/Vuex)
+![Alt text](/public/screenshots/1.png)
+
+- ✅ Node.js + npm
+- ✅ Vue 3 via Vite
+- ✅ Vue Router
+- ✅ Minimal Dependencies
+- ✅ Simple state (using reactive store — lighter than Pinia/Vuex)
 
 - custom modal system
 - composable-based
