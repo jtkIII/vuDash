@@ -5,6 +5,10 @@
 
 ![Alt text](/public/screenshots/1.png)
 
+---
+
+### Features
+
 - ✅ Node.js + npm
 - ✅ Vue 3 via Vite
 - ✅ Vue Router
@@ -21,7 +25,7 @@
 
 ---
 
-#### For completeness:
+#### Installation
 
 Make sure Node.js (LTS) is installed.
 
