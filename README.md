@@ -101,7 +101,7 @@ src/
 - router/ – Vue Router configuration
 - assets/ – Static assets and media
 
-**There is additional incomplete documentation in the /docs directory.**
+**There is additional incomplete documentation in the (/docs)[https://github.com/jtkIII/v-dash/tree/main/docs] directory.**
 
 ---
 
