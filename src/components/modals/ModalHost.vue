@@ -1,9 +1,5 @@
 <template>
-  <component
-    v-if="modal"
-    :is="modal.component"
-    v-bind="modal.props"
-  />
+  <component v-if="modal" :is="modal.component" v-bind="modal.props" />
 </template>
 
 <script setup>

@@ -48,10 +48,14 @@ docs/
 public/
 src/
 ├── assets/
-│   ├── style.css
-│   ├── variables.css
+│   ├── base.css
+│   ├── index.css
 │   ├── reset.css
+│   ├── theme-dark.css
+│   ├── theme-light.css
+│   ├── variables.css
 ├── components/
+│   ├── blog
 │   ├── charts
 │   └── layout
 │   ├── modals
@@ -61,9 +65,13 @@ src/
 ├── compostables/
 │   ├── useDirtyState.js
 │   └── useModal.js
+│   └── usePosts.js
+│   └── useTheme.js
+│   └── useUsers.js
 ├── views/
 │   ├── HomeView.vue
 │   └── AboutView.vue
+│   └── BlogView.vue
 │   ├── EvenMore.vue
 │   └── Settings.vue
 ├── router/
@@ -72,7 +80,6 @@ src/
 │   └── state.js
 ├── App.vue
 └── main.js
-└── style.css
 ```
 
 - components/ – Reusable UI components, grouped by feature (charts, modals, search, etc.)
@@ -82,7 +89,7 @@ src/
 - router/ – Vue Router configuration
 - assets/ – Static assets and media
 
-**There is additional documentation in the /docs directory.**
+**There is additional incomplete documentation in the /docs directory.**
 
 ---
 
