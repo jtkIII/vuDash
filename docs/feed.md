@@ -12,5 +12,6 @@
     avatar          // URL or null
   }
 }
+
 ```
 

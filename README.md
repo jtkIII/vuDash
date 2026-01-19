@@ -15,6 +15,7 @@
 - visually flexible
 - backend-agnostic
 - zero-lock-in
+- dark mode / light mode
 
 ---
 

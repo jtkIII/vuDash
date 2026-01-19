@@ -1,24 +1,24 @@
 <template>
-    <div class="cards-grid">
-      <div class="card">
-        <CardHeader title="Team Members" subtitle="Overview of the team and their roles." />
-        <ListUsers />
-      </div>
-
-      <div class="card">
-        <CardHeader title="Project Stats" subtitle="Key metrics and performance over time." />
-        <LineChart title="Tasks Completed Over Time" />
-        <PieChart />
-      </div>
-
-      <div class="card">
-        <CardHeader title="Global Search" subtitle="Find users, messages, files, and more." />
-        <GlobalSearch @select="handleSelect" />
-        <ContentSep />
-        <CardHeader title="Activity Feed" subtitle="Recent activity in the workspace." />
-        <ActivityFeed @select="handleSelect" />
-      </div>
+  <div class="cards-grid">
+    <div class="card">
+      <CardHeader title="Team Members" subtitle="Overview of the team and their roles." />
+      <ListUsers />
     </div>
+
+    <div class="card">
+      <CardHeader title="Project Stats" subtitle="Key metrics and performance over time." />
+      <LineChart title="Tasks Completed Over Time" />
+      <PieChart />
+    </div>
+
+    <div class="card">
+      <CardHeader title="Global Search" subtitle="Find users, messages, files, and more." />
+      <GlobalSearch @select="handleSelect" />
+      <ContentSep />
+      <CardHeader title="Activity Feed" subtitle="Recent activity in the workspace." />
+      <ActivityFeed @select="handleSelect" />
+    </div>
+  </div>
 </template>
 
 <script setup>
@@ -45,5 +45,4 @@ function handleSelect({ group, item }) {
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 16px;
 }
-
 </style>
