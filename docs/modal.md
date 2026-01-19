@@ -5,6 +5,7 @@ I used to use NPM packages to do pop-up windows; but I decided that this time I 
 Keyboard support, Accessibility, Clean Architecture
 
 ### Files
+```
 ├── modals/
 │   ├── ConfirmModal.vue
 │   ├── ModalHost.vue
@@ -12,7 +13,7 @@ Keyboard support, Accessibility, Clean Architecture
 
 ├── composables/
 │   ├── useModal.js
-
+```
 
 #### Details
 Confirm and Notice are basically the same thing, although confirm has 2 buttons (Multi-button confirm modal) and notice one - no choice.  The idea was to separate the different types of modals into their own files although this is far from perfect and could certainly be refactored, duplication eliminated, etc.
