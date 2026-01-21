@@ -1,10 +1,14 @@
 # v-dash
 ## Vue3 Dashboard
 
+[See it in action](https://jtkiii.github.io/v-dash/#/)
+
 ### I'm going for “UI-complete for mock stage”.
 So while this is still very much a work in progress it's not a bad starting point if you are interested in creating a dashboard, need a quick and dirty way to hook up a back end or connect to an api, or are just interested in seeing how a Vue app might work.
 
 ![Alt text](/public/screenshots/1.png)
+
+
 
 ---
 
